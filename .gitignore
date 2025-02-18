@@ -1,0 +1,32 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Node.js
+node_modules/
+
+# C++
+*.o
+*.a
+*.so
+*.exe
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# 文件夹
+!/docs/
+/static/
+/templates/
+/tmp/
+
+# 临时文件
+
+
