@@ -1,0 +1,39 @@
+name: "bluebell"
+mode: "dev"
+port: 8084
+version: "v0.0.1"
+start_time: "2024-07-02"
+machine_id: 1
+
+auth:
+  jwt_expire: 3600
+
+log:
+  level: "info"
+  filename: "web_app.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: "root"
+  password: "xxxx"
+  dbname: "bluebell"
+  max_open_conns: 200
+  max_idle_conns: 20
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password: "xxxx"
+  db: 0
+  pool_size: 100
+
+redis_persistence:
+  interval: 100                  # 持久化时间间隔，单位：秒
+  retry_count: 3                 # 每次任务失败后的最大重试次数
+  score_fixed_days: 30           # 帖子分数固定时间（天）
+  batch_size: 200                # 每 次处理的最大数据
+  timeout:  5                    # 操作超时时间，避免长时间阻塞
+  cleanup_after_persist: false   # 是否在 MySQL 持久化后清理 Redis 中已同步数据
+  log_level: "INFO"              # 日志级别，可选：DEBUG、INFO、ERROR
