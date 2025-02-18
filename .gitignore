@@ -22,7 +22,7 @@ node_modules/
 *.log
 
 # 文件夹
-!/docs/
+/docs/
 /static/
 /templates/
 /tmp/
